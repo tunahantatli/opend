@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import homeImage from "../../assets/home-img.png";
 import Item from "./Item";
+import Minter from "./Minter";
 
 function App() {
 
@@ -15,9 +16,10 @@ function App() {
       <Header />
       
       <div className="container">
-        <div className="main-content-1">
+        {/* <div className="main-content-1">
          <Item id={NFTID}/>
-        </div>
+        </div> */}
+        <Minter />
       </div>
       <Footer />
     </div>
