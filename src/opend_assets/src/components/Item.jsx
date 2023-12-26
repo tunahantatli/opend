@@ -1,7 +1,9 @@
 import React from "react";
 import logo from "../../assets/logo.png";
 
-function Item() {
+function Item(props) {
+  const id = props.id;
+  const localHost = "http://localhost:8080/";
   return (
     <div className="disGrid-item">
       <div className="disPaper-root disCard-root makeStyles-root-17 disPaper-elevation1 disPaper-rounded">
