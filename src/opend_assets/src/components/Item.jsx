@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { HttpAgent, Actor } from "@dfinity/agent"
 import { idlFactory } from "../../../declarations/nft";
-import { Principal } from "@dfinity/principal"
+import { Principal } from "@dfinity/principal";
+
 function Item(props) {
   const id = Principal.fromText(props.id);
   const localHost = "http://localhost:8080/";

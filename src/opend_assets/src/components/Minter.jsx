@@ -1,5 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { opend } from "../../../declarations/opend";
+import {Principal} from "@dfinity/principal"
+
+
+
+
 
 function Minter() {
 
@@ -9,9 +15,10 @@ function Minter() {
     const image = data.image[0];
     const imageArray = await image.arrayBuffer()
     const imageByteData = [...new Uint8Array(imageArray)]
-  }
 
-
+    const newNFTID = await opend.mint(imageByteData, name);
+    console.log(newNFTID.toText())
+  };
   return (
     <div className="minter-container">
       <h3 className="makeStyles-title-99 Typography-h3 form-Typography-gutterBottom">
